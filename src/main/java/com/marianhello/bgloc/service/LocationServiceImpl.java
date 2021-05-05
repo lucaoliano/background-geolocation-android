@@ -414,7 +414,7 @@ public class LocationServiceImpl extends Service implements ProviderDelegate, Lo
                 mProvider.onCommand(LocationProvider.CMD_SWITCH_MODE,
                         LocationProvider.FOREGROUND_MODE);
             }
-            super.startForeground(NOTIFICATION_ID, notification);
+            super.startForeground(Boolean.TRUE.equals(config.getNotificationsEnabled()) ? NOTIFICATION_ID : 0, notification);
             mIsInForeground = true;
         }
     }
