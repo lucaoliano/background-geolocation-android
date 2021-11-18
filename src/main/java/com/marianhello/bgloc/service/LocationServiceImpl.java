@@ -29,8 +29,8 @@ import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
 import android.os.Process;
-import android.support.annotation.Nullable;
-import android.support.v4.content.LocalBroadcastManager;
+import androidx.annotation.Nullable;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.marianhello.bgloc.Config;
 import com.marianhello.bgloc.ConnectivityListener;
@@ -414,7 +414,7 @@ public class LocationServiceImpl extends Service implements ProviderDelegate, Lo
                 mProvider.onCommand(LocationProvider.CMD_SWITCH_MODE,
                         LocationProvider.FOREGROUND_MODE);
             }
-            super.startForeground(Boolean.TRUE.equals(config.getNotificationsEnabled()) ? NOTIFICATION_ID : 0, notification);
+            super.startForeground(NOTIFICATION_ID, notification);
             mIsInForeground = true;
         }
     }

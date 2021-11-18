@@ -36,7 +36,7 @@ public class ContentProviderLocationDAO implements LocationDAO {
     }
 
     /**
-     * Get ocations that match whereClause
+     * Get locations that match whereClause
      *
      * @param whereClause
      * @param whereArgs
